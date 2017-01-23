@@ -1,2 +1,5 @@
 <h1>Housing</h1>
 <a routerLink="/">Home</a>
+<div class="panel panel-default" (click)="goToDetailPage(currentPost)" *ngFor="let currentPost of masterPostList">
+  <li>{{currentPost.title}}, {{currentPost.date}}</li>
+</div>

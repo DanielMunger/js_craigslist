@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
+
 import { AppComponent } from './app.component';
 import { CommunityComponent } from './community/community.component';
 import { HomeComponent } from './home/home.component';
 import { PersonalsComponent } from './personals/personals.component';
 import { HousingComponent } from './housing/housing.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { HousingComponent } from './housing/housing.component';
     CommunityComponent,
     HomeComponent,
     PersonalsComponent,
-    HousingComponent
+    HousingComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

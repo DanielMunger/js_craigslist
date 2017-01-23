@@ -4,6 +4,7 @@ import { CommunityComponent } from './community/community.component';
 import { HomeComponent } from './home/home.component';
 import { PersonalsComponent } from './personals/personals.component';
 import { HousingComponent } from './housing/housing.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'housing',
     component: HousingComponent
+  },
+  {
+    path: ':category/posts/:id',
+    component: PostDetailComponent
   }
 ];
 
