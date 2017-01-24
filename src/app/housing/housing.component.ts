@@ -18,6 +18,10 @@ export class HousingComponent implements OnInit {
   }
 
 
+  // getItem ( uid: string ) {
+  //   return this.posts.uid;
+  // }
+
     categoryToFilter = "housing";
 
 

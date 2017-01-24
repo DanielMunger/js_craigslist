@@ -10,29 +10,27 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class CategoryPipe implements PipeTransform {
   posts: FirebaseListObservable<any[]>;
 
-  transform(input: Post[], category: string) {
+  transform(input: Post, category: string) {
 
     var output: Post[] = [];
-    debugger;
-    console.log("hello");
+    console.log(input.category);
     if (category === "personals") {
-      for (var i = 0; i<input.length; i++) {
-        if (input[i].category === "personals") {
-          output.push(input[i]);
+      // for (var i = 0; i<input.length; i++) {
+        if (input.category === "personals") {
+          output.push(input);
         }
-      }
+      // }
     } else if (category === "community") {
-      for (var i = 0; i<input.length; i++) {
-        if (input[i].category === "community") {
-          output.push(input[i]);
+      // for (var i = 0; i<input.length; i++) {
+        if (input.category === "community") {
+          output.push(input);
         }
-      }
+      // }
     } else if (category === "housing") {
-      for (var i = 0; i<input.length; i++) {
-        if (input[i].category === "housing") {
-          output.push(input[i]);
+        if (input.category === "housing") {
+          debugger;
+          output.push(input);
         }
-      }
     }
     return output;
   }
