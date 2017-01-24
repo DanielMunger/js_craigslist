@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { PersonalsComponent } from './personals/personals.component';
 import { HousingComponent } from './housing/housing.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: ':category/posts/:id',
     component: PostDetailComponent
+  },
+  {
+    path: 'newpost',
+    component: NewPostComponent
   }
 ];
 

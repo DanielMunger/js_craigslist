@@ -1,5 +1,6 @@
 <h1>Housing</h1>
 <a routerLink="/">Home</a>
-<div class="panel panel-default" (click)="goToDetailPage(currentPost)" *ngFor="let currentPost of masterPostList">
+<div class="panel panel-default" (click)="goToDetailPage(currentPost)" *ngFor="let currentPost of posts | category:filterByCategory | async">
   <li>{{currentPost.title}}, {{currentPost.date}}</li>
+  <li>{{currentPost.$key}}</li>
 </div>

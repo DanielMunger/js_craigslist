@@ -18,8 +18,8 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css",
-        "../bower_components/bootstrap/dist/css/bootstrap.css"
+        "../bower_components/bootstrap/dist/css/bootstrap.css",
+        "styles.css"
       ],
       "scripts": [],
       "environments": {

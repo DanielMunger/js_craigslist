@@ -1,0 +1,29 @@
+<div class="newPost">
+  <form class="newPost">
+    <select required #postCategory>
+      <option disabled="disabled">Category</option>
+      <option value="community">Community</option>
+      <option value="housing">Housing</option>
+      <option value="personals">Personals</option>
+    </select>
+    <select required #postSubCategory>
+      <option disabled="disabled">Sub-Category</option>
+      <option value="artists">Artists</option>
+      <option value="pets">Pets</option>
+      <option value="apts/housing">Apts / Housing</option>
+    </select>
+    <label for="postTitle">Title</label>
+    <input type="text" #newPostTitle>
+    <label for="postContert">Content</label>
+    <textarea #newPostContent></textarea>
+    <label for="postImage">Image</label>
+    <input type="text" #newPostImage>
+    <label for="postLocation">Location</label>
+    <input type="text" #newPostLocation>
+    <label for="postPrice">Price</label>
+    <input type="number" #newPostPrice>
+    <button (click)="newPost(postCategory.value, postSubCategory.value, newPostContent.value, newPostImage.value, newPostLocation.value, newPostPrice.value)">Post</button>
+    <button type="button" (click)=
+    "closeForm()">Cancel</button>
+  </form>
+</div>

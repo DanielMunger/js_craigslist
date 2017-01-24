@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-community',
@@ -9,11 +10,13 @@ import { PostService } from '../post.service';
   styleUrls: ['./community.component.css'],
   providers: [PostService]
 })
-export class CommunityComponent implements OnInit {
+export class CommunityComponent implements OnInit{
+  posts: FirebaseListObservable<any[]>;
+
 
   constructor(private router: Router, private postService: PostService){}
 
-  posts: Post[];
+  categoryToFilter = "community";
 
   ngOnInit() {
     this.posts = this.postService.getPosts();
@@ -21,5 +24,5 @@ export class CommunityComponent implements OnInit {
 
   goToDetailPage(clickedPost: Post) {
     this.router.navigate([clickedPost.category+'/posts', clickedPost.id]);
-  };
+  }
 }
